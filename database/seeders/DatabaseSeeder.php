@@ -19,6 +19,10 @@ class DatabaseSeeder extends Seeder
             Rioseeder::class,
         ]);
 
+
+        $this->call(MolyNameSeeder::class);
+
+
      /*   $this->call([
             MoonSeeder::class,
             // يمكنك إضافة المزيد من Seeders هنا

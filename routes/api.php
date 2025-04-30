@@ -68,12 +68,12 @@ return $Rio;
 
 
 
-
+// ارسال طلب بستخدام api و post 
 Route::post('/Rio', function(Request $request) {
     $validator = Validator::make($request->all(), [
         'name'        => 'required|string|max:255',
         'description' => 'required|string|max:255',
-        'price'       => 'required|string|max:255',
+        'price'       => 'required|string|min:0',
         'quantity'    => 'required|string|max:255',
     ]);
 
