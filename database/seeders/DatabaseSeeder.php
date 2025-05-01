@@ -13,11 +13,29 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+
+        $this->call([
+            Rioseeder::class,
         ]);
+
+
+        $this->call(MolyNameSeeder::class);
+
+
+     /*   $this->call([
+            MoonSeeder::class,
+            // يمكنك إضافة المزيد من Seeders هنا
+        ]);
+    
+       // استدعاء Seeder الخاص بـ _user_lapha
+       $this->call(UserLaphaSeeder::class);
+    */
+    
     }
+
+
+
+
+
 }
